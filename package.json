@@ -8,7 +8,13 @@
     "test": "ember test -s",
     "build": "ember build",
     "lint": "./node_modules/.bin/sass-lint",
-    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist my-app.surge.sh"
+    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist my-app.surge.sh",
+    "selenium-install": "node_modules/.bin/selenium-standalone install",
+    "selenium": "node_modules/.bin/selenium-standalone start",
+    "chromedriver": "node_modules/selenium-standalone/.selenium/chromedriver/2.30-x64-chromedriver --url-base=/wd/hub --port=4444",
+    "chrome": "wdio repl chrome",
+    "tester": "./node_modules/.bin/wdio wdio.conf.js",
+    "geckodriver": "node_modules/selenium-standalone/.selenium/geckodriver/0.17.0-x64-geckodriver --url-base=/wd/hub --port=4444"
   },
   "author": "",
   "license": "ISC",
@@ -20,12 +26,20 @@
   "devDependencies": {
     "broccoli": "^0.16.9",
     "broccoli-autoprefixer": "^4.1.0",
-    "broccoli-csso": "^2.0.0",
     "broccoli-cli": "^1.0.0",
+    "broccoli-csso": "^2.0.0",
     "broccoli-inject-livereload": "^0.2.0",
     "broccoli-merge-trees": "^1.1.1",
     "broccoli-sass": "^0.7.0",
+    "chai": "^4.1.1",
     "ember-cli": "^2.6.0",
-    "sass-lint": "^1.8.0"
+    "geckodriver": "^1.8.1",
+    "mocha": "^3.5.0",
+    "sass-lint": "^1.8.0",
+    "selenium-standalone": "^6.8.0",
+    "wdio-cucumber-framework": "^1.0.1",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-spec-reporter": "^0.1.2",
+    "webdriverio": "^4.8.0"
   }
 }
