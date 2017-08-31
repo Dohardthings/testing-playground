@@ -1,5 +1,5 @@
+require(`babel-core/register`);
 exports.config = {
-
     //
     // ==================
     // Specify Test Files
