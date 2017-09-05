@@ -11,7 +11,7 @@
     "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist my-app.surge.sh",
     "selenium-install": "node_modules/.bin/selenium-standalone install",
     "selenium": "node_modules/.bin/selenium-standalone start",
-    "chromedriver": "node_modules/selenium-standalone/.selenium/chromedriver/2.30-x64-chromedriver --url-base=/wd/hub --port=4444",
+    "chromedriver": "node_modules/chromedriver/bin/chromedriver --url-base=/wd/hub --port=4444",
     "chrome": "wdio repl chrome",
     "tester": "./node_modules/.bin/wdio wdio.conf.js",
     "geckodriver": "node_modules/selenium-standalone/.selenium/geckodriver/0.17.0-x64-geckodriver --url-base=/wd/hub --port=4444"
@@ -33,6 +33,7 @@
     "broccoli-merge-trees": "^1.1.1",
     "broccoli-sass": "^0.7.0",
     "chai": "^4.1.1",
+    "chromedriver": "^2.32.0",
     "ember-cli": "^2.6.0",
     "geckodriver": "^1.8.1",
     "mocha": "^3.5.0",
